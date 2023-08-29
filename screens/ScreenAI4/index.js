@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
+import React from "react";
+import { View, Text, Image, StyleSheet, SafeAreaView, Button } from "react-native";
 
 const BlueScreen = () => {
   return <SafeAreaView style={styles.container}>
@@ -8,13 +8,14 @@ const BlueScreen = () => {
       </View>
       <View style={styles.content}>
         <Image style={styles.image} source={{
-        uri: 'https://tinyurl.com/42evm3m3'
+        uri: "https://tinyurl.com/42evm3m3"
       }} />
         <Text style={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
           euismod libero, vel bibendum sapien. Nulla facilisi. Sed euismod
           euismod libero, vel bibendum sapien. Nulla facilisi.
         </Text>
+        <Button title="Click me!" onPress={() => alert("Button clicked!")} />
       </View>
     </SafeAreaView>;
 };
@@ -22,22 +23,22 @@ const BlueScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0077be'
+    backgroundColor: "#0077be"
   },
   header: {
     height: 50,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff'
+    fontWeight: "bold",
+    color: "#fff"
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   image: {
     width: 200,
@@ -46,8 +47,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    color: '#fff',
-    textAlign: 'center',
+    color: "#fff",
+    textAlign: "center",
     paddingHorizontal: 20
   }
 });
